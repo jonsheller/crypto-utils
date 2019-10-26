@@ -17,7 +17,6 @@ def sign(secret, data):
 def verify_signature(secret, data, signature):
     s = SHA1()
     valid_sig = s.update(secret).update(data).finalize().hex()
-    print(valid_sig)
     return valid_sig == signature
 
 
